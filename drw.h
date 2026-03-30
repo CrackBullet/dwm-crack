@@ -30,6 +30,7 @@ typedef struct {
 Drw *drw_create(Display *dpy, int screen, Window win, unsigned int w, unsigned int h);
 void drw_resize(Drw *drw, unsigned int w, unsigned int h);
 void drw_free(Drw *drw);
+void drw_image(Drw *drw, int x, int y, unsigned int w, unsigned int h, XImage *ximage);
 
 /* Fnt abstraction */
 Fnt *drw_fontset_create(Drw* drw, const char *fonts[], size_t fontcount);

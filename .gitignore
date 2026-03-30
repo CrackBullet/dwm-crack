@@ -1,0 +1,9 @@
+# The actual compiled program (the binary)
+dwm
+
+# Object files (temporary files created during build)
+*.o
+
+# Patch artifacts (backups created if a patch fails)
+*.orig
+*.rej

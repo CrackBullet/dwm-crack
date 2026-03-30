@@ -406,6 +406,17 @@ no_match:
 }
 
 void
+drw_image(Drw *drw, int x, int y, unsigned int w, unsigned int h, XImage *ximage)
+{
+	if (!drw || !drw->drawable || !ximage)
+		return;
+	
+	XSetClipOrigin(drw->dpy, drw->gc, x, y);
+	XSetClipMask(drw->dpy, drw->gc, None);
+	XPutImage(drw->dpy, drw->drawable, drw->gc, ximage, 0, 0, x, y, w, h);
+}
+
+void
 drw_map(Drw *drw, Window win, int x, int y, unsigned int w, unsigned int h)
 {
 	if (!drw)
