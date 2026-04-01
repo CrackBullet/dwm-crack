@@ -1,9 +1,18 @@
-# The actual compiled program (the binary)
-dwm
+# binaries
+/dwm
 
-# Object files (temporary files created during build)
+# User config (created from config.def.h, not tracked)
+config.h
+
+# Patch Fail
+*.rej
+*.orig
+
+# Object Files
 *.o
 
-# Patch artifacts (backups created if a patch fails)
-*.orig
-*.rej
+nohup.out
+.DS_STORE
+
+/release/**
+/release
